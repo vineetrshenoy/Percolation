@@ -6,27 +6,25 @@ Percolation can be modeled using an N x N grid in which sites are either opened 
 
 The APIs are as follows:
 
-  public class Percolation {
-   public Percolation(int N)               // create N-by-N grid, with all sites blocked
-   public void open(int i, int j)          // open site (row i, column j) if it is not open already
-   public boolean isOpen(int i, int j)     // is site (row i, column j) open?
-   public boolean isFull(int i, int j)     // is site (row i, column j) full?
-   public boolean percolates()             // does the system percolate?
-
-   public static void main(String[] args   // test client (optional)
-}
+    public class Percolation {
+    public Percolation(int N)               // create N-by-N grid, with all sites blocked
+    public void open(int i, int j)          // open site (row i, column j) if it is not open already
+    public boolean isOpen(int i, int j)     // is site (row i, column j) open?
+    public boolean isFull(int i, int j)     // is site (row i, column j) full?
+    public boolean percolates()             // does the system percolate?
+    }
+  
 
 Once the percolation data type was created, the PercolationStats class was written to analyze the performance of the algorithm
 
-public class PercolationStats {
-   public PercolationStats(int N, int T)     // perform T independent experiments on an N-by-N grid
-   public double mean()                      // sample mean of percolation threshold
-   public double stddev()                    // sample standard deviation of percolation threshold
-   public double confidenceLo()              // low  endpoint of 95% confidence interval
-   public double confidenceHi()              // high endpoint of 95% confidence interval
-
-   public static void main(String[] args)    // test client (described below)
-}
+    public class PercolationStats {
+    public PercolationStats(int N, int T)     // perform T independent experiments on an N-by-N grid
+    public double mean()                      // sample mean of percolation threshold
+    public double stddev()                    // sample standard deviation of percolation threshold
+    public double confidenceLo()              // low  endpoint of 95% confidence interval
+    public double confidenceHi()              // high endpoint of 95% confidence interval
+    public static void main(String[] args)    // test client 
+    }
 
 
 This assignment was completed on June 22, 2015
